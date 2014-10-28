@@ -5,12 +5,13 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Thu Oct  9 11:53:18 2014 arnaud boulay
-** Last update Tue Oct 28 15:04:51 2014 arnaud boulay
+** Last update Tue Oct 28 17:53:18 2014 arnaud boulay
 */
 
 #ifndef MY_H_
 # define MY_H_
 
+int	is_op(char c);
 int	is_nbr(char c);
 int	expr(char *str, int *i, int tmp);
 int	mul(char *str, int *i, int tmp);

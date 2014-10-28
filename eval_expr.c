@@ -5,18 +5,10 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Tue Oct 28 17:27:38 2014 arnaud boulay
+** Last update Tue Oct 28 18:19:27 2014 arnaud boulay
 */
 
 #include "my.h"
-
-int	is_nbr(char c)
-{
-  if (c >= '0' && c <= '9')
-    return (1);
-  else
-    return (0);
-}
 
 int	expr(char *str, int *i, int tmp)
 {
@@ -27,8 +19,12 @@ int	expr(char *str, int *i, int tmp)
     }
   else if (str[*i] == ')')
     *i = *i + 1;
+  while (is_nbr(str[*i]) == 0)
+    *i = *i + 1;
   tmp = my_get_nbr(&str[*i]);
   while (is_nbr(str[*i]) == 1)
+    *i = *i + 1;
+  while (str[*i] == ' ')
     *i = *i + 1;
   return (tmp);
 }
