@@ -5,7 +5,7 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Tue Oct 28 16:05:25 2014 dimitri danilov
+** Last update Tue Oct 28 17:27:38 2014 arnaud boulay
 */
 
 #include "my.h"
@@ -34,7 +34,7 @@ int	expr(char *str, int *i, int tmp)
 }
 
 int	mul(char *str, int *i, int tmp)
-{ 
+{
   tmp = expr(str, i, tmp);
   while (str[*i] == '*' || str[*i] == '/' || str[*i] == '%')
     {
@@ -44,9 +44,15 @@ int	mul(char *str, int *i, int tmp)
 	  tmp = tmp * expr(str, i, tmp);
 	}
       else if (str[*i] == '/')
-	tmp = tmp / expr(str, i, tmp);
+	{
+	  *i = *i + 1;
+	  tmp = tmp / expr(str, i, tmp);
+	}
       else if (str[*i] == '%')
-	tmp = tmp % expr(str, i, tmp);
+	{
+	  *i = *i + 1;
+	  tmp = tmp % expr(str, i, tmp);
+	}
     }
   return (tmp);
 }
