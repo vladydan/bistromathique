@@ -5,25 +5,27 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Tue Oct 28 21:10:35 2014 dimitri danilov
+** Last update Wed Oct 29 19:14:25 2014 dimitri danilov
 */
 
 #include "my.h"
 
 int	expr(char *str, int *i, int tmp)
 {
+  while (is_nbr(str[*i]) == 0 && str[*i] != '(')
+    *i = *i + 1;
   if (str[*i] == '(')
     {
       *i = *i + 1;
-      tmp =add(str, i, tmp);
+      tmp = add(str, i, tmp);
     }
   if (str[*i] == ')')
     {
       *i = *i + 1;
+      while (str[*i] == ' ')
+	*i = *i + 1;
       return (tmp);
     }
-  while (is_nbr(str[*i]) == 0)
-    *i = *i + 1;
   tmp = my_get_nbr(&str[*i]);
   while (is_nbr(str[*i]) == 1)
     *i = *i + 1;
