@@ -5,12 +5,12 @@
 ## Login   <boulay_b@epitech.net>
 ## 
 ## Started on  Sun Oct 26 13:32:10 2014 arnaud boulay
-## Last update Tue Oct 28 17:53:45 2014 arnaud boulay
+## Last update Thu Oct 30 10:34:31 2014 dimitri danilov
 ##
 
-NAME	= bistro
+NAME	= calc
 
-SRCS	= bistro.c \
+SRCS	= main.c \
 	  eval_expr.c \
 	  tools.c
 
