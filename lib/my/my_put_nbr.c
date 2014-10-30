@@ -5,10 +5,10 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Wed Oct  1 21:02:36 2014 arnaud boulay
-** Last update Sat Oct 25 09:09:05 2014 arnaud boulay
+** Last update Thu Oct 30 11:28:05 2014 arnaud boulay
 */
 
-int	my_put_nbr(int nb)
+void	my_put_nbr(int nb)
 {
   int	lenght;
   int	rslt;

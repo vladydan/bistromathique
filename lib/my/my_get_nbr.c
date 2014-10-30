@@ -5,10 +5,10 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Mon Oct 20 10:39:40 2014 arnaud boulay
-** Last update Wed Oct 29 19:39:31 2014 dimitri danilov
+** Last update Thu Oct 30 10:08:02 2014 arnaud boulay
 */
 
-int	my_get_nbr2(char *str)
+int	my_get_nbr(char *str)
 {
   int	i;
   int	nbr;

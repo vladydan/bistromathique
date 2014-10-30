@@ -5,7 +5,7 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Thu Oct 30 10:55:15 2014 dimitri danilov
+** Last update Thu Oct 30 13:17:39 2014 arnaud boulay
 */
 
 #include "my.h"
@@ -81,14 +81,14 @@ char 	*add(char *str, int *i, int tmp)
   return (tmp);
 }
 
-char	*eval_expr(char *base, char *operateur, char *expr, int size)
+char	*eval_expr(char *base, char *ops, char *expr, unsigned int size)
 {
-  char	*final;
+  char	*rslt;
   int	i;
   int	tmp;
 
   i = 0;
   tmp = 0;
-  final = add(expr, &i, tmp);
-  return (final);
+  rslt = add(expr, &i, tmp);
+  return (rslt);
 }

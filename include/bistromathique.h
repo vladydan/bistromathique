@@ -5,15 +5,9 @@
 ** Login   <rn@epita.fr>
 ** 
 ** Started on  Tue Oct 23 11:48:35 2001 Charlie Root
-** Last update Thu Oct 30 10:34:49 2014 dimitri danilov
+** Last update Thu Oct 30 11:12:39 2014 arnaud boulay
 */
 
-/*
-** should be remove if you include stdlib.h (malloc.h does it)
-*/
-/*
-**
-*/
 #define	OP_OPEN_PARENT_IDX	0
 #define	OP_CLOSE_PARENT_IDX	1
 #define	OP_PLUS_IDX		2

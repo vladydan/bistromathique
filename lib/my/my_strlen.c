@@ -1,20 +1,19 @@
 /*
-** my_strlen.c for my_strlen in /home/danilo_d/rendu/Piscine_C_J04
+** my_strlen.c for my_strlen in /home/boulay_b/work
 ** 
-** Made by dimitri danilov
-** Login   <danilo_d@epitech.net>
+** Made by arnaud boulay
+** Login   <boulay_b@epitech.net>
 ** 
-** Started on  Thu Oct  2 16:03:17 2014 dimitri danilov
-** Last update Fri Oct  3 21:26:54 2014 dimitri danilov
+** Started on  Thu Oct  2 16:15:08 2014 arnaud boulay
+** Last update Thu Oct 30 11:27:48 2014 arnaud boulay
 */
+
 int	my_strlen(char *str)
 {
-  int	n;
+  int	i;
 
-  n = 0;
-  while (str[n] != '\0')
-    {
-      n++;
-    }
-  return (n);
+  i = 0;
+  while (str[i] != '\0')
+    i = i + 1;
+  return (i);
 }
