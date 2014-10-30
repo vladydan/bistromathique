@@ -5,19 +5,19 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Thu Oct 30 13:17:39 2014 arnaud boulay
+** Last update Thu Oct 30 20:13:03 2014 dimitri danilov
 */
 
 #include "my.h"
 
-char	*expr(char *str, int *i, int tmp)
+char	*expr(char *str, int *i, char *tmp)
 {
   while (is_nbr(str[*i]) == 0 && str[*i] != '(')
     *i = *i + 1;
   if (str[*i] == '(')
     {
       *i = *i + 1;
-      tmp = add(str, i, tmp);
+          /* tmp = add(str, i, tmp);remplacer par fonction addition */
     }
   if (str[*i] == ')')
     {
@@ -28,7 +28,7 @@ char	*expr(char *str, int *i, int tmp)
     }
   while (str[*i] == ' ')
     *i = *i + 1;
-  tmp = my_get_nbr(&str[*i]);
+  /* tmp = my_get_nbr(&str[*i]); get str dessus */
   while (is_nbr(str[*i]) == 1)
     *i = *i + 1;
   while (str[*i] == ' ')
@@ -36,7 +36,7 @@ char	*expr(char *str, int *i, int tmp)
   return (tmp);
 }
 
-char	*mul(char *str, int *i, int tmp)
+char	*mul(char *str, int *i, char *tmp)
 {
   tmp = expr(str, i, tmp);
   while (str[*i] == '*' || str[*i] == '/' || str[*i] == '%')
@@ -44,23 +44,23 @@ char	*mul(char *str, int *i, int tmp)
       if (str[*i] == '*')
 	{
 	  *i = *i + 1;
-	  tmp = tmp * expr(str, i, tmp);
+	  /* tmp = tmp * expr(str, i, tmp); */
 	}
       else if (str[*i] == '/')
 	{
 	  *i = *i + 1;
-	  tmp = tmp / expr(str, i, tmp);
+	  /* tmp = tmp / expr(str, i, tmp); */
 	}
       else if (str[*i] == '%')
 	{
 	  *i = *i + 1;
-	  tmp = tmp % expr(str, i, tmp);
+	  /* tmp = tmp % expr(str, i, tmp); */
 	}
     }
   return (tmp);
 }
 
-char 	*add(char *str, int *i, int tmp)
+char 	*add(char *str, int *i, char *tmp)
 {
   tmp = mul(str, i, tmp);
   while (str[*i] == '+'|| str[*i] == '-')
@@ -68,14 +68,14 @@ char 	*add(char *str, int *i, int tmp)
       if (str[*i] == '+')
 	{
 	  *i = *i + 1;
-	  tmp = tmp + mul(str, i, tmp);
+	  /* tmp = tmp + mul(str, i, tmp); */
 	}
       else if (str[*i] == '-')
 	{
 	  *i = *i + 1;
 	  while (str[*i] == ' ')
 	    *i = *i + 1;
-	  tmp = tmp - mul(str, i, tmp);
+	  /* tmp = tmp - mul(str, i, tmp); */
 	}
     }
   return (tmp);
@@ -85,7 +85,7 @@ char	*eval_expr(char *base, char *ops, char *expr, unsigned int size)
 {
   char	*rslt;
   int	i;
-  int	tmp;
+  char	*tmp;
 
   i = 0;
   tmp = 0;
