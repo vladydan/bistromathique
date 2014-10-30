@@ -5,7 +5,7 @@
 ## Login   <boulay_b@epitech.net>
 ## 
 ## Started on  Sun Oct 26 13:32:10 2014 arnaud boulay
-## Last update Thu Oct 30 13:33:06 2014 arnaud boulay
+## Last update Thu Oct 30 21:16:46 2014 dimitri danilov
 ##
 
 NAME	= calc
@@ -44,7 +44,7 @@ $(LIBNAME): $(LIBOJBS)
 	mv $(LIBNAME).a lib/my
 
 $(NAME): $(OBJS)
-	cc -o $(NAME) srcs/$(OBJS) -lmy -Llib/my
+	cc -o $(NAME) $(OBJS) -lmy -Llib/my
 
 clean:
 	rm -f $(OBJS)
