@@ -5,7 +5,7 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Thu Oct  9 11:53:18 2014 arnaud boulay
-** Last update Tue Oct 28 17:53:18 2014 arnaud boulay
+** Last update Thu Oct 30 10:55:55 2014 dimitri danilov
 */
 
 #ifndef MY_H_
@@ -13,10 +13,9 @@
 
 int	is_op(char c);
 int	is_nbr(char c);
-int	expr(char *str, int *i, int tmp);
-int	mul(char *str, int *i, int tmp);
-int	add(char *str, int *i, int tmp);
-int	eval_expr(char *expr);
+char	*expr(char *str, int *i, int tmp);
+char	*mul(char *str, int *i, int tmp);
+char	*add(char *str, int *i, int tmp);
 int	my_put_nbr(int nb);
 int	my_get_nbr(char *str);
 void	my_putchar(char c);

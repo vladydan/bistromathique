@@ -5,12 +5,12 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Wed Oct 29 20:51:37 2014 dimitri danilov
+** Last update Thu Oct 30 10:55:15 2014 dimitri danilov
 */
 
 #include "my.h"
 
-int	expr(char *str, int *i, int tmp)
+char	*expr(char *str, int *i, int tmp)
 {
   while (is_nbr(str[*i]) == 0 && str[*i] != '(')
     *i = *i + 1;
@@ -36,7 +36,7 @@ int	expr(char *str, int *i, int tmp)
   return (tmp);
 }
 
-int	mul(char *str, int *i, int tmp)
+char	*mul(char *str, int *i, int tmp)
 {
   tmp = expr(str, i, tmp);
   while (str[*i] == '*' || str[*i] == '/' || str[*i] == '%')
@@ -60,7 +60,7 @@ int	mul(char *str, int *i, int tmp)
   return (tmp);
 }
 
-int	add(char *str, int *i, int tmp)
+char 	*add(char *str, int *i, int tmp)
 {
   tmp = mul(str, i, tmp);
   while (str[*i] == '+'|| str[*i] == '-')
@@ -81,14 +81,14 @@ int	add(char *str, int *i, int tmp)
   return (tmp);
 }
 
-int	eval_expr(char *expr)
+char	*eval_expr(char *base, char *operateur, char *expr, int size)
 {
-  int	nbr;
+  char	*final;
   int	i;
   int	tmp;
 
   i = 0;
   tmp = 0;
-  nbr = add(expr, &i, tmp);
-  return (nbr);
+  final = add(expr, &i, tmp);
+  return (final);
 }
