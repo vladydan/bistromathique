@@ -5,7 +5,7 @@
 ## Login   <boulay_b@epitech.net>
 ## 
 ## Started on  Sun Oct 26 13:32:10 2014 arnaud boulay
-## Last update Thu Oct 30 21:16:46 2014 dimitri danilov
+## Last update Fri Oct 31 16:03:56 2014 dimitri danilov
 ##
 
 NAME	= calc
@@ -18,7 +18,8 @@ SRCSFO	= srcs/
 
 SRCS	= $(SRCSFO)main.c \
 	  $(SRCSFO)eval_expr.c \
-
+	  $(SRCSFO)my_get_str.c \
+	  $(SRCSFO)addition.c
 LIBSRCS	= $(LIBFO)is_nbr.c \
 	  $(LIBFO)is_op.c \
 	  $(LIBFO)my_atoi.c \
@@ -26,7 +27,7 @@ LIBSRCS	= $(LIBFO)is_nbr.c \
 	  $(LIBFO)my_putchar.c \
 	  $(LIBFO)my_put_nbr.c \
 	  $(LIBFO)my_putstr.c \
-	  $(LIBFO)my_strlen.c
+	  $(LIBFO)my_strlen.c \
 
 OBJS	= $(SRCS:.c=.o)
 
