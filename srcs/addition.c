@@ -30,7 +30,6 @@ char			*addition(char *str_1, char *str_2)
       add.taille_1 = add.taille_1 - 1;
       add.taille_2 = add.taille_2 - 1;
     }
-  my_putstr(str3);
   return (str3);
 }
 

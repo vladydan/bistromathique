@@ -5,7 +5,7 @@
 ** Login   <rn@epita.fr>
 ** 
 ** Started on  Tue Oct 23 11:45:05 2001 Charlie Root
-** Last update Thu Oct 30 11:10:58 2014 arnaud boulay
+** Last update Fri Oct 31 18:15:32 2014 dimitri danilov
 */
 
 #include <stdlib.h>
@@ -14,8 +14,6 @@
 #include "bistromathique.h"
 #include "my.h"
 
-void		my_putstr(char *);
-int		my_strlen(char *);
 int		my_atoi(char *);
 static void	check_base(char *base);
 static void	check_ops(char *ops);
@@ -37,7 +35,8 @@ int		main(int ac, char **av)
   check_ops(av[2]);
   size = my_atoi(av[3]);
   expr = get_expr(size);
-  my_putstr(eval_expr(av[1], av[2], expr, size));
+  my_putstr( eval_expr(av[1], av[2], expr, size));
+  my_putchar('\n');
   return (0);
 }
 

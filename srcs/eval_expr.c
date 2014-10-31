@@ -5,7 +5,7 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Sun Oct 26 13:18:53 2014 arnaud boulay
-** Last update Fri Oct 31 16:06:00 2014 dimitri danilov
+** Last update Fri Oct 31 18:06:08 2014 dimitri danilov
 */
 
 #include "my.h"
@@ -81,7 +81,7 @@ char 	*add(char *str, int *i, char *tmp, char *base)
 
 char	*eval_expr(char *base, char *ops, char *expr, unsigned int size)
 {
-  char	*rslt="fdp de compileur";
+  char	*rslt;
   int	i; 
   char	*tmp; 
   
