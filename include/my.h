@@ -5,7 +5,7 @@
 ** Login   <boulay_b@epitech.net>
 ** 
 ** Started on  Thu Oct  9 11:53:18 2014 arnaud boulay
-** Last update Fri Oct 31 18:12:06 2014 dimitri danilov
+** Last update Sat Nov  1 15:43:20 2014 dimitri danilov
 */
 
 #ifndef MY_H_
@@ -21,12 +21,13 @@ int	my_put_nbr(int nb);
 int	my_get_nbr(char *str);
 void	my_putchar(char c);
 char	*my_get_str(char *str, char *base);
-char	*addition(char *str, char *str2);
+char	*addition(char *str1, char *str2, char *base);
 typedef struct		s_addition
 {
   int	taille_1;
   int	taille_2;
   int	position;
   int	retenu;
+  int	taille_base;
 }			t_addition;
 #endif /* !MY_H_ */

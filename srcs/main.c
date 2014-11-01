@@ -5,7 +5,7 @@
 ** Login   <rn@epita.fr>
 ** 
 ** Started on  Tue Oct 23 11:45:05 2001 Charlie Root
-** Last update Fri Oct 31 18:15:32 2014 dimitri danilov
+** Last update Fri Oct 31 19:40:10 2014 dimitri danilov
 */
 
 #include <stdlib.h>
@@ -23,7 +23,7 @@ int		main(int ac, char **av)
 {
   char		*expr;
   unsigned int	size;
-
+  char		*final;
   if (ac != 4)
     {
       my_putstr("Usage : ");
@@ -35,7 +35,8 @@ int		main(int ac, char **av)
   check_ops(av[2]);
   size = my_atoi(av[3]);
   expr = get_expr(size);
-  my_putstr( eval_expr(av[1], av[2], expr, size));
+  final = eval_expr(av[1], av[2], expr, size);
+  my_putstr(&final[1]);
   my_putchar('\n');
   return (0);
 }
